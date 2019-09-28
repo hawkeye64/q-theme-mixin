@@ -39,7 +39,11 @@ module.exports = function (ctx) {
       //            (not treeshaking Quasar; biggest bundle size; convenient)
       all: 'auto',
 
-      components: [],
+      components: [
+        'QCheckbox',
+        'QKnob',
+        'QRadio'
+      ],
       directives: [],
 
       // Quasar plugins
