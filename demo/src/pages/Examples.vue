@@ -1,29 +1,15 @@
 <template>
   <hero>
     <div class="q-markdown">
-      <example-title title="Colorize Basic" />
-      <example-card title="Text" name="ColorizeColor" :tag-parts="getTagParts(require('!!raw-loader!../examples/ColorizeColor.vue').default)" />
-      <example-card title="Background" name="ColorizeBackground" :tag-parts="getTagParts(require('!!raw-loader!../examples/ColorizeBackground.vue').default)" />
-      <example-card title="Border" name="ColorizeBorder" :tag-parts="getTagParts(require('!!raw-loader!../examples/ColorizeBorder.vue').default)" />
-      <example-card title="Text, Background and Border" name="ColorizeBoth" :tag-parts="getTagParts(require('!!raw-loader!../examples/ColorizeBoth.vue').default)" />
-
-      <example-title title="Colorize Advanced" />
       <q-markdown>
-For all examples below that take an input, you can manually enter any valid color as well. Here are some ideas you can try:
-
-| Color | Type |
-| --- | --- |
-| purple-7 | Quasar color palette |
-| --q-color-green-5 | Quasar css var color |
-| rgb(255, 128, 27) | rgb color |
-| hsl(120, 100%, 50%) | hsl color |
-| coral | CSS named color |
-
+In the examples below, QThemeMixin is dependent on the [QColorizeMixin](https://github.com/hawkeye64/q-colorize-mixin) to apply the actual colors.
       </q-markdown>
-      <example-card title="Text with Input" name="ColorizeColorSelection" :tag-parts="getTagParts(require('!!raw-loader!../examples/ColorizeColorSelection.vue').default)" />
-      <example-card title="Background with Input" name="ColorizeBackgroundSelection" :tag-parts="getTagParts(require('!!raw-loader!../examples/ColorizeBackgroundSelection.vue').default)" />
-      <example-card title="Border with Input" name="ColorizeBorderSelection" :tag-parts="getTagParts(require('!!raw-loader!../examples/ColorizeBackgroundSelection.vue').default)" />
-      <example-card title="Text, Background and Border with Input" name="ColorizeBothSelection" :tag-parts="getTagParts(require('!!raw-loader!../examples/ColorizeBothSelection.vue').default)" />
+      <example-title title="Theme Basic" />
+      <example-card title="Simple Theme" name="ThemeSimple" :tag-parts="getTagParts(require('!!raw-loader!../examples/ThemeSimple.vue').default)" />
+
+      <example-title title="Theme Advanced" />
+      <example-card title="Theme Selection" name="ThemeSelection" :tag-parts="getTagParts(require('!!raw-loader!../examples/ThemeSelection.vue').default)" />
+      <example-card title="Theme Quasar Components" name="ThemeQuasarComponents" :tag-parts="getTagParts(require('!!raw-loader!../examples/ThemeQuasarComponents.vue').default)" />
 
     </div>
   </hero>
@@ -54,16 +40,11 @@ export default {
   mounted () {
     this.toc = []
     this.tempToc = []
-    this.addToToc('Colorize Basic')
-    this.addToToc('Text', 2)
-    this.addToToc('Background', 2)
-    this.addToToc('Border', 2)
-    this.addToToc('Text, Background and Border', 2)
-    this.addToToc('Colorize Advanced')
-    this.addToToc('Text with Input', 2)
-    this.addToToc('Background with Input', 2)
-    this.addToToc('Border with Input', 2)
-    this.addToToc('Text, Background and Border with Input', 2)
+    this.addToToc('Theme Basic')
+    this.addToToc('Simple Theme', 2)
+    this.addToToc('Theme Advanced')
+    this.addToToc('Theme Selection', 2)
+    this.addToToc('Theme Quasar Components', 2)
 
     this.toc = this.tempToc
   },

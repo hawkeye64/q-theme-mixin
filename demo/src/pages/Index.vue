@@ -2,12 +2,7 @@
   <hero>
     <q-markdown :src="markdown" toc @data="onToc" />
     <component-api
-      title="Colorize API"
-      :json="colorizeJson"
-      type="Vue Mixin"
-    />
-    <component-api
-      title="Theme API"
+      title="QThemeMixin API"
       :json="themeJson"
       type="Vue Mixin"
     />
@@ -26,9 +21,8 @@ This page created with [QMarkdown](https://quasarframework.github.io/app-extensi
 
 <script>
 import Hero from '../components/Hero'
-import markdown from '../markdown/colorize.md'
-import colorizeJson from '@quasar/quasar-app-extension-colorize/src/components/colorize/Colorize.json'
-import themeJson from '@quasar/quasar-app-extension-colorize/src/components/theme/Theme.json'
+import markdown from '../markdown/theme.md'
+import themeJson from 'q-theme-mixin/src/component/QThemeMixin.json'
 
 export default {
   name: 'PageIndex',
@@ -40,7 +34,6 @@ export default {
   data () {
     return {
       markdown: markdown,
-      colorizeJson: colorizeJson,
       themeJson: themeJson
     }
   },
@@ -61,8 +54,7 @@ export default {
   methods: {
     onToc (toc) {
       // add the manual ones
-      toc.push({ id: 'Colorize-API', label: 'Colorize API', level: 1, children: Array(0) })
-      toc.push({ id: 'Theme-API', label: 'Theme API', level: 1, children: Array(0) })
+      toc.push({ id: 'QThemeMixin-API', label: 'QThemeMixin API', level: 1, children: Array(0) })
       toc.push({ id: 'Donate', label: 'Donate', level: 1, children: Array(0) })
 
       this.toc = toc

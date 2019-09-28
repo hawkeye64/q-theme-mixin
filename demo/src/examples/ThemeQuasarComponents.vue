@@ -33,13 +33,13 @@
 
 <script>
 import Vue from 'vue'
-import Colorize from '@quasar/quasar-app-extension-colorize/src/colorize'
-import Theme from '@quasar/quasar-app-extension-colorize/src/theme'
+import QColorizeMixin from 'q-colorize-mixin'
+import QThemeMixin from 'q-theme-mixin'
 
 const MyComponent = Vue.extend({
   name: 'my-component',
 
-  mixins: [Colorize, Theme],
+  mixins: [QColorizeMixin, QThemeMixin],
 
   data () {
     return {
