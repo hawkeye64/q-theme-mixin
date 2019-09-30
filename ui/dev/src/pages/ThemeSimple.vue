@@ -12,8 +12,8 @@
 
 <script>
 import Vue from 'vue'
-import QColorizeMixin from 'q-colorize-mixin'
-import QThemeMixin from 'ui'
+import { QColorizeMixin } from 'q-colorize-mixin'
+import { QThemeMixin } from 'ui' // "ui" is aliased in quasar.conf.js
 
 const MyComponent = Vue.extend({
   name: 'my-component',

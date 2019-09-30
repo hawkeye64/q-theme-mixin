@@ -7,4 +7,11 @@ export {
   QThemeMixin
 }
 
-export default QThemeMixin
+export default {
+  QThemeMixin,
+  version,
+
+  install (Vue) {
+    Vue.component(QThemeMixin.name, QThemeMixin)
+  }
+}

@@ -5,7 +5,7 @@ QThemeMixin is a Vue Mix-in library for components created with Quasar Framework
 
 # Features
 
-Allows you to define themes to be used (check out [QCalendar](https://github.com/quasarframework/app-extension-qcalendar))
+Allows you to define themes to be used (check out [QCalendar](https://github.com/quasarframework/app-extension-qcalendar)) in conjunction with [QColorizeMixin](https://github.com/hawkeye64/q-colorize-mixin).
 
 # Install
 To add this mix-in to your Quasar application, run the following (in your Quasar app folder):
@@ -35,6 +35,39 @@ Examples with code can be found [here](https://hawkeye64.github.io/q-theme-mixin
 # Demo Project (source)
 Source for this application can be found [here](https://github.com/hawkeye64/q-theme-mixin/tree/master/demo).
 
+# Setup
+```bash
+$ cd ui
+
+$ yarn
+```
+
+# Developing
+```bash
+# start dev in SPA mode
+$ yarn dev
+```
+
+# Building package
+```bash
+$ yarn build
+```
+
+# Building Demo
+```bash
+# first time prep
+$ cd ui
+$ yarn link
+$ cd ../demo
+$ yarn link "q-mixin-mixin"
+
+# for interactive - browser opens automatically
+$ quasar dev
+
+# for build - goes to docs folder
+$ yarn build-demo
+```
+
 # Code Usage
 
 It is important to note that this mixin is intended to be used with Vue **render** functions and not in SFC (single file components). It does not have a render function of its own.
@@ -43,7 +76,7 @@ It is important to note that this mixin is intended to be used with Vue **render
 
 ```js
 import Vue from 'vue'
-import QThemeMixin from 'q-theme-mixin'
+import { QThemeMixin } from 'q-theme-mixin'
 
 export default Vue.extend({
   name: 'my-component',

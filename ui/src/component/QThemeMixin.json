@@ -15,7 +15,7 @@
   },
   "methods": {
     "useDefaultTheme": {
-      "desc": "Used as a placeholder when theming is turned off (replaces `setBothColors` in Colorize mixin)",
+      "desc": "Used as a placeholder when theming is turned off (replaces `setBothColors` in [QColorizeMixin](https://github.com/hawkeye64/q-colorize-mixin) mixin)",
       "__exemption": [ "examples" ],
       "params": {
         "color": {

@@ -12,8 +12,8 @@
 
 <script>
 import Vue from 'vue'
-import QColorizeMixin from 'q-colorize-mixin'
-import QThemeMixin from 'q-theme-mixin'
+import { QColorizeMixin } from 'q-colorize-mixin'
+import { QThemeMixin } from 'q-theme-mixin'
 
 const MyComponent = Vue.extend({
   name: 'my-component',
