@@ -12,7 +12,7 @@
 
 ```js
 import Vue from 'vue'
-import QThemeMixin from 'q-theme-mixin'
+import { QThemeMixin } from 'q-theme-mixin'
 
 Vue.use(QThemeMixin)
 ```
@@ -21,7 +21,7 @@ or:
 
 ```js
 <script>
-import QThemeMixin from 'q-theme-mixin'
+import { QThemeMixin } from 'q-theme-mixin'
 
 export default {
   components: {
@@ -29,27 +29,6 @@ export default {
   }
 }
 </script>
-```
-
-## UMD variant
-
-Exports `window.QThemeMixin`.
-
-Add the following tag(s) after the Quasar ones:
-
-```html
-<head>
-  <!-- AFTER the Quasar stylesheet tags: -->
-  <link href="https://cdn.jsdelivr.net/npm/q-theme-mixin/dist/index.min.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-  <!-- at end of body, AFTER Quasar script(s): -->
-  <script src="https://cdn.jsdelivr.net/npm/q-theme-mixin/dist/index.umd.min.js"></script>
-</body>
-```
-If you need the RTL variant of the CSS, then go for the following (instead of the above stylesheet link):
-```html
-<link href="https://cdn.jsdelivr.net/npm/q-theme-mixin/dist/index.rtl.min.css" rel="stylesheet" type="text/css">
 ```
 
 # Setup

@@ -1,6 +1,6 @@
 /*!
- * q-theme-mixin v1.0.0-alpha.1
+ * q-theme-mixin v1.0.0-alpha.2
  * (c) 2019 Jeff Galbraith <jeff@quasar.dev>
  * Released under the MIT License.
  */
-var version="1.0.0-alpha.1",QThemeMixin={name:"QThemeMixin",props:{theme:{type:Object,default:function(){}},enableTheme:Boolean},methods:{useDefaultTheme:function(e,i,n){return void 0===n&&(n={}),n},getThemeColors:function(e){var i=this;void 0===e&&(e=[]);var n=new Map;return!0===this.enableTheme&&void 0!==this.theme&&e.forEach(function(e){n.set(e,i.theme[e])}),n}}};QThemeMixin.version=version;export default QThemeMixin;export{QThemeMixin};
+var version="1.0.0-alpha.2",QThemeMixin={name:"QThemeMixin",props:{theme:{type:Object,default:function(){}},enableTheme:Boolean},methods:{useDefaultTheme:function(e,n,i){return void 0===i&&(i={}),i},getThemeColors:function(e){var n=this;void 0===e&&(e=[]);var i=new Map;return!0===this.enableTheme&&void 0!==this.theme&&e.forEach(function(e){i.set(e,n.theme[e])}),i}}};QThemeMixin.version=version;var index={QThemeMixin:QThemeMixin,version:version,install:function(e){e.component(QThemeMixin.name,QThemeMixin)}};export default index;export{QThemeMixin};
