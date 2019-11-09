@@ -10,7 +10,7 @@ console.log()
 
 require('./script.clean.js')
 
-console.log(` 📦 Building ${green('v' + require('../package.json').version)}...${parallel ? blue(' [multi-threaded]') : ''}\n`)
+console.log(` 📦 Building ${green(require('../package.json').name + ':')} ${green('v' + require('../package.json').version)}...${parallel ? blue(' [multi-threaded]') : ''}\n`)
 
 createFolder('dist')
 
