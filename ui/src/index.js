@@ -1,5 +1,5 @@
 import { version } from '../package.json'
-import QThemeMixin from './component/Component'
+import QThemeMixin from './components/QThemeMixin'
 
 QThemeMixin.version = version
 
