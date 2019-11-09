@@ -1,7 +1,6 @@
 {
-  "type": "mixin",
   "props": {
-    "theme-enabled": {
+    "enable-theme": {
       "type": "Boolean",
       "category": "style",
       "desc": "Turns theming on or off"
@@ -36,7 +35,8 @@
       },
       "returns": {
         "type": "Object",
-        "desc": "The passed in `data` with no modifications"
+        "desc": "The passed in `data` with no modifications",
+        "__exemption": [ "examples" ]
       }
     },
     "getThemeColors": {
@@ -51,7 +51,8 @@
       },
       "returns": {
         "type": "Map",
-        "desc": "Returns a Map of theme items based on passed in keys"
+        "desc": "Returns a Map of theme items based on passed in keys",
+        "__exemption": [ "examples" ]
       }
     }
   }
