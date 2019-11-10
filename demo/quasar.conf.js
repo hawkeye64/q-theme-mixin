@@ -12,7 +12,7 @@ module.exports = function (ctx) {
     ],
 
     css: [
-      'app.styl'
+      'app.sass'
     ],
 
     extras: [
@@ -97,6 +97,13 @@ module.exports = function (ctx) {
           options: {
             formatter: require('eslint').CLIEngine.getFormatter('stylish')
           }
+        })
+      },
+
+      chainWebpack (chain) {
+        chain.resolve.alias.merge({
+          'q-theme-mixin': path.resolve(__dirname, '../ui/src/index.js'),
+          'api': path.resolve(__dirname, '../ui/dist/api/QThemeMixin.json')
         })
       }
     },
