@@ -60,11 +60,9 @@ $ yarn build
 
 # Building Demo
 ```bash
-# first time prep
-$ cd ui
-$ yarn link
-$ cd ../demo
-$ yarn link "q-theme-mixin"
+# first time prep (from root)
+$ cd demo
+$ yarn
 
 # for interactive - browser opens automatically
 $ quasar dev
@@ -74,7 +72,7 @@ $ yarn build-demo
 ```
 
 # Donate
-If you appreciate the work that went into this, please consider [donating to Quasar](https://donate.quasar.dev).
+If you appreciate the work that went into this, please consider donating to [Quasar](https://donate.quasar.dev) or [Jeff](https://github.com/sponsors/hawkeye64).
 
 # License
 MIT (c) Jeff Galbraith <jeff@quasar.dev>
