@@ -3,7 +3,7 @@
     <q-markdown :src="markdown" toc @data="onToc" />
     <component-api
       title="QThemeMixin API"
-      :json="themeJson"
+      :json="json"
       type="Vue Mixin"
     />
     <q-markdown>
@@ -22,7 +22,7 @@ This page created with [QMarkdown](https://quasarframework.github.io/app-extensi
 <script>
 import Hero from '../components/Hero'
 import markdown from '../markdown/theme.md'
-import themeJson from 'q-theme-mixin/src/component/QThemeMixin.json'
+import api from 'api'
 
 export default {
   name: 'PageIndex',
@@ -34,7 +34,7 @@ export default {
   data () {
     return {
       markdown: markdown,
-      themeJson: themeJson
+      json: api
     }
   },
 

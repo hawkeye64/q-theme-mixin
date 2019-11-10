@@ -1,7 +1,7 @@
 {
-  "type": "mixin",
+  "type": "component",
   "props": {
-    "theme-enabled": {
+    "enable-theme": {
       "type": "Boolean",
       "category": "style",
       "desc": "Turns theming on or off"
@@ -9,29 +9,24 @@
     "theme": {
       "type": "Object",
       "category": "style",
-      "desc": "A customized theme definition (see examples above)",
-      "__exemption": [ "examples" ]
+      "desc": "A customized theme definition (see examples above)"
     }
   },
   "methods": {
     "useDefaultTheme": {
       "desc": "Used as a placeholder when theming is turned off (replaces `setBothColors` in [QColorizeMixin](https://github.com/hawkeye64/q-colorize-mixin) mixin)",
-      "__exemption": [ "examples" ],
       "params": {
         "color": {
           "type": "String",
-          "desc": "Any color from the [Quasar Color Pallete](https://quasar.dev/style/color-palette) or a CSS color (#, rgb, rgba, hls, etc)",
-          "__exemption": [ "examples" ]
+          "desc": "Any color from the [Quasar Color Pallete](https://quasar.dev/style/color-palette) or a CSS color (#, rgb, rgba, hls, etc)"
         },
         "bgColor": {
           "type": "String",
-          "desc": "Any color from the [Quasar Color Pallete](https://quasar.dev/style/color-palette) or a CSS color (#, rgb, rgba, hls, etc)",
-          "__exemption": [ "examples" ]
+          "desc": "Any color from the [Quasar Color Pallete](https://quasar.dev/style/color-palette) or a CSS color (#, rgb, rgba, hls, etc)"
         },
         "data": {
           "type": "Object",
-          "desc": "Typically the `{ }` of a render function",
-          "__exemption": [ "examples" ]
+          "desc": "Typically the `{ }` of a render function"
         }
       },
       "returns": {
@@ -41,12 +36,10 @@
     },
     "getThemeColors": {
       "desc": "Returns a Map of theme items based on passed in keys",
-      "__exemption": [ "examples" ],
       "params": {
         "keys": {
           "type": "Array",
-          "desc": "An array of keys to return from the `theme` object",
-          "__exemption": [ "examples" ]
+          "desc": "An array of keys to return from the `theme` object"
         }
       },
       "returns": {

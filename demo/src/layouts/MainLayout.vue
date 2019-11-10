@@ -13,7 +13,7 @@
         </q-btn>
 
         <q-toolbar-title>
-          QThemeThemeMixin <span class="text-subtitle2">v{{ version }}</span>
+          QThemeMixin <span class="text-subtitle2">v{{ version }}</span>
         </q-toolbar-title>
 
         <div>Quasar v{{ $q.version }}</div>
