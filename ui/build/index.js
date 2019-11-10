@@ -15,4 +15,4 @@ console.log(` 📦 Building ${green(require('../package.json').name + ':')} ${gr
 createFolder('dist')
 
 runJob(join(__dirname, './script.javascript'))
-runJob(join(__dirname, './script.css'))
+// runJob(join(__dirname, './script.css'))
