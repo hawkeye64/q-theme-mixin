@@ -1,6 +1,6 @@
 {
   "name": "q-theme-mixin",
-  "version": "1.0.0-alpha.3",
+  "version": "1.0.0",
   "author": "Jeff Galbraith <jeff@quasar.dev>",
   "description": "Quasar theme mixin",
   "license": "MIT",
