@@ -69,7 +69,7 @@ const MyComponent = Vue.extend({
           color: this.enableTheme === true && this.theme && 'color' in this.theme ? this.theme.color : void 0
         },
         on: {
-          'input': (v) => { this.radio = v }
+          input: (v) => { this.radio = v }
         }
       }))
     },
@@ -91,7 +91,7 @@ const MyComponent = Vue.extend({
           color: this.enableTheme === true && this.theme && 'color' in this.theme ? this.theme.color : void 0
         },
         on: {
-          'input': (v) => { this.checkbox = v }
+          input: (v) => { this.checkbox = v }
         }
       }))
     },
@@ -111,7 +111,7 @@ const MyComponent = Vue.extend({
           value: this.knob
         },
         on: {
-          'input': (v) => { this.knob = v }
+          input: (v) => { this.knob = v }
         }
       }))
     }
