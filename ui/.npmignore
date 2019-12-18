@@ -20,6 +20,9 @@ yarn-error.log*
 # Linters
 .eslintignore
 .eslintrc.js
+.editorconfig
+.stylintrc
+.postcssrc.js
 
 # Other
 /src/components/QThemeMixin.json
