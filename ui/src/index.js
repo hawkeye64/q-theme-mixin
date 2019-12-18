@@ -4,7 +4,8 @@ import QThemeMixin from './components/QThemeMixin'
 QThemeMixin.version = version
 
 export {
-  QThemeMixin
+  QThemeMixin,
+  version
 }
 
 export default {
