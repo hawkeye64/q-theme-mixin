@@ -1,4 +1,7 @@
 {
+  "meta": {
+    "docsUrl": "https://hawkeye64.github.io/q-theme-mixin/docs"
+  },
   "props": {
     "enable-theme": {
       "type": "Boolean",
