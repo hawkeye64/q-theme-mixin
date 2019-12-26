@@ -5,11 +5,11 @@
 In the examples below, QThemeMixin is dependent on the [QColorizeMixin](https://github.com/hawkeye64/q-colorize-mixin) to apply the actual colors.
       </q-markdown>
       <example-title title="Theme Basic" />
-      <example-card title="Simple Theme" name="ThemeSimple" :tag-parts="getTagParts(require('!!raw-loader!../examples/ThemeSimple.vue').default)" />
+      <example-viewer title="Simple Theme" file="ThemeSimple" no-edit :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
 
       <example-title title="Theme Advanced" />
-      <example-card title="Theme Selection" name="ThemeSelection" :tag-parts="getTagParts(require('!!raw-loader!../examples/ThemeSelection.vue').default)" />
-      <example-card title="Theme Quasar Components" name="ThemeQuasarComponents" :tag-parts="getTagParts(require('!!raw-loader!../examples/ThemeQuasarComponents.vue').default)" />
+      <example-viewer title="Theme Selection" file="ThemeSelection" no-edit :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
+      <example-viewer title="Theme Quasar Components" file="ThemeQuasarComponents" no-edit :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
 
     </div>
   </hero>
@@ -18,22 +18,29 @@ In the examples below, QThemeMixin is dependent on the [QColorizeMixin](https://
 <script>
 import Hero from '../components/Hero'
 import ExampleTitle from '../components/ExampleTitle'
-import ExampleCard from '../components/ExampleCard'
 import { slugify } from '../utils/page-utils'
-import { getTagParts } from '@quasar/quasar-ui-qmarkdown'
+import { version } from 'q-theme-mixin'
 
 export default {
   name: 'Examples',
 
   components: {
     Hero,
-    ExampleTitle,
-    ExampleCard
+    ExampleTitle
   },
 
   data () {
     return {
-      tempToc: []
+      tempToc: [],
+      locationUrl: 'https://github.com/hawkeye64/q-theme-mixin/tree/dev/demo/src/examples/',
+      jsPaths: [
+        `https://cdn.jsdelivr.net/npm/hawkeye64/q-theme-mixin@${version}/dist/index.umd.min.js`,
+        'https://cdn.jsdelivr.net/npm/hawkeye64/q-colorize-mixin@latest/dist/index.umd.min.js'
+      ],
+      cssPaths: [
+        `https://cdn.jsdelivr.net/npm/hawkeye64/q-theme-mixin@${version}/dist/index.min.css`,
+        'https://cdn.jsdelivr.net/npm/hawkeye64/q-colorize-mixin@latest/dist/index.min.css'
+      ]
     }
   },
 
@@ -62,9 +69,12 @@ export default {
   },
 
   methods: {
-    getTagParts,
     addToToc (name, level = 1) {
-      const slug = slugify(name)
+      let n = name
+      if (level > 1) {
+        n = 'example-' + n
+      }
+      const slug = slugify(n)
       this.tempToc.push({
         children: [],
         id: slug,
@@ -75,12 +85,3 @@ export default {
   }
 }
 </script>
-
-<style lang="stylus">
-.example-page
-  padding: 16px 46px;
-  font-weight: 300;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-</style>
