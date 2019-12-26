@@ -8,7 +8,6 @@ module.exports = function (ctx) {
     // app boot file (/src/boot)
     // --> boot files are part of "main.js"
     boot: [
-      'components'
     ],
 
     css: [
@@ -103,7 +102,8 @@ module.exports = function (ctx) {
       chainWebpack (chain) {
         chain.resolve.alias.merge({
           'q-theme-mixin': path.resolve(__dirname, '../ui/src/index.js'),
-          'api': path.resolve(__dirname, '../ui/dist/api/QThemeMixin.json')
+          'api': path.resolve(__dirname, '../ui/dist/api/QThemeMixin.json'),
+          'examples': path.resolve(__dirname, './src/examples')
         })
       }
     },
